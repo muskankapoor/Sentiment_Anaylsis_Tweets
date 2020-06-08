@@ -1,3 +1,6 @@
 Muskan Kapoor
 I am interested in database management and machine learning.
 Through this project, I hope to gain new skills and learn new things from my teammates as well. When i pitched this idea, I truly found it interesting that we might be able to create a tool that will be useful in today's online market.And a fun fact: I have professionally learned the dance for more than a decade now. so it is a great hobby
+Joseph Ruocco
+I am interested in Ios development and a hint of web design.
+I hope this project will be a constructive experience in team building, learning about applicaitons of sentiment analysis in a real life way, and figuring out how to branch in git. Hope this works!
