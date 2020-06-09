@@ -7,3 +7,6 @@ I hope this project will be a constructive experience in team building, learning
 
 # Yuna Kim
 I'm interested in all sorts of systems. Sentiment analysis seems like an interesting technique to learn about. I'm sure everyone working on this project will learn a lot.
+
+# Nicole Liang 
+I am a fullstack developer whose interested in designing and building useful product fitted for its purpose. For this project, I am particularly interested in how to incorporate useful machine learning tools for sentiment analysis. Through this project, I expect to refine my skills in data visualation and building an application with machine learning technologies. 
