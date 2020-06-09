@@ -4,3 +4,6 @@ Through this project, I hope to gain new skills and learn new things from my tea
 Joseph Ruocco
 I am interested in Ios development and a hint of web design.
 I hope this project will be a constructive experience in team building, learning about applicaitons of sentiment analysis in a real life way, and figuring out how to branch in git. Hope this works!
+
+# Yuna Kim
+I'm interested in all sorts of systems. Sentiment analysis seems like an interesting technique to learn about. I'm sure everyone working on this project will learn a lot.
