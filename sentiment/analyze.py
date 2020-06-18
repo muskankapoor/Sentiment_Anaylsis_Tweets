@@ -16,14 +16,9 @@ tone_analyzer = ToneAnalyzerV3(version='2020-06-17')
 tone_analyzer.set_service_url('https://gateway.watsonplatform.net/tone-analyzer/api')
 
 # text = "this is a sample tweet #analyze" 
-
 # print(json.dumps(tone_analysis, indent=2))
 
-class WatsonSentimenter(Sentimenter):
-    def __init__(self, seed=None):
-        if seed:
-            random.seed(seed)
-            
+class WatsonSentimenter(Sentimenter):            
     def analyze_text(self, text):
         tone_analysis = tone_analyzer.tone({'text': text}, content_type='application/json' ).get_result()
         return tone_analysis
