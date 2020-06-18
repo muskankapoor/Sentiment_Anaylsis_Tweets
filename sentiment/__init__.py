@@ -9,6 +9,10 @@ from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
 #)
 # tone_analyzer.set_service_url('{url}')
 
+class Sentimenter(ABC):
+    @abstractmethod
+    def analyze_text(self, text):
+        pass
 
 # Authentication via external config like VCAP_SERVICES
 tone_analyzer = ToneAnalyzerV3(version='2020-06-17')
@@ -16,7 +20,7 @@ tone_analyzer.set_service_url('https://gateway.watsonplatform.net/tone-analyzer/
 
 text = "this is a sample tweet #analyze" 
 
-def checkTone(text):
+def analyze_text(self, text):
     tone_analysis = tone_analyzer.tone({'text': text}, content_type='application/json' ).get_result()
     return tone_analysis
 
@@ -27,10 +31,7 @@ def checkTone(text):
 #import random
 #
 #
-#class Sentimenter(ABC):
-#    @abstractmethod
-#    def analyze_text(self, text):
-#        pass
+
 #
 #class RandomSentimenter(Sentimenter):
 #    def __init__(self, seed=None):
