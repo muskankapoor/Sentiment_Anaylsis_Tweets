@@ -2,13 +2,7 @@ from flask import Flask
 from flask_cors import CORS
 
 from cache.sqlite import SqliteCache
-<<<<<<< HEAD
 from sentiment.analyze import WatsonSentimenter
-||||||| merged common ancestors
-from sentiment import RandomSentimenter
-=======
-from sentiment import WatsonSentimenter
->>>>>>> 69923d57a0d4a5030d2534aa7a541cbc05b26970
 from sentiment.caching import CachingSentimenter
 
 CACHE_DB_PATH = 'db/cache.db'
