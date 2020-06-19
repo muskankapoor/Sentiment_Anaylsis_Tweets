@@ -14,6 +14,6 @@ cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
 def tweet_analysis(tweet_id):
     cache = SqliteCache("sentiments", CACHE_DB_PATH)
     watson_sent = WatsonSentimenter()
-    sentimenter = CachingSentimenter(cache, random_sent)
+    sentimenter = CachingSentimenter(cache, watson_sent)
 
     return sentimenter.analyze_text(str(tweet_id))
