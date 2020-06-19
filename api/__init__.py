@@ -2,7 +2,7 @@ from flask import Flask
 from flask_cors import CORS
 
 from cache.sqlite import SqliteCache
-from sentiment import RandomSentimenter
+from sentiment import WatsonSentimenter
 from sentiment.caching import CachingSentimenter
 
 CACHE_DB_PATH = 'db/cache.db'
