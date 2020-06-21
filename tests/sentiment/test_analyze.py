@@ -3,38 +3,79 @@ import unittest
 
 from sentiment.analyze import WatsonSentimenter
 
+
+text = 'Team, I know that times are tough! Product '\
+    'sales have been disappointing for the past three '\
+    'quarters. We have a competitive product, but we '\
+    'need to do a better job of selling it!'
+
+output = {
+  "document_tone": {
+    "tones": [
+      {
+        "score": 0.6165,
+        "tone_id": "sadness",
+        "tone_name": "Sadness"
+      },
+      {
+        "score": 0.829888,
+        "tone_id": "analytical",
+        "tone_name": "Analytical"
+      }
+    ]
+  },
+  "sentences_tone": [
+    {
+      "sentence_id": 0,
+      "text": "Team, I know that times are tough!",
+      "tones": [
+        {
+          "score": 0.801827,
+          "tone_id": "analytical",
+          "tone_name": "Analytical"
+        }
+      ]
+    },
+    {
+      "sentence_id": 1,
+      "text": "Product sales have been disappointing for the past three quarters.",
+      "tones": [
+        {
+          "score": 0.771241,
+          "tone_id": "sadness",
+          "tone_name": "Sadness"
+        },
+        {
+          "score": 0.687768,
+          "tone_id": "analytical",
+          "tone_name": "Analytical"
+        }
+      ]
+    },
+    {
+      "sentence_id": 2,
+      "text": "We have a competitive product, but we need to do a better job of selling it!",
+      "tones": [
+        {
+          "score": 0.506763,
+          "tone_id": "analytical",
+          "tone_name": "Analytical"
+        }
+      ]
+    }
+  ]
+}
+
 class WatsonSentimenterTest(unittest.TestCase):
     def setUp(self):
-        pass
+        self.sentiment = WatsonSentimenter()
 
     def tearDown(self):
         pass
 
     def test_watsonsentimenter(self):
-        self.assertEqual(self.WatsonSentimenter.analyze_text(
-            """I hate these new features On #ThisPhone after the update. I hate #ThisPhoneCompany products, you'd have to torture me to get me to use #ThisPhone. The emojis in #ThisPhone are stupid. #ThisPhone is a useless, stupid waste of money. #ThisPhone is the worst phone I've ever had - ever. #ThisPhone another ripoff, lost all respect SHAME. I'm worried my #ThisPhone is going to overheat like my brother's did. #ThisPhoneCompany really let me down... my new phone won't even turn on."""
-        ),
-    {
-  "document_tone": {
-    "tones": [
-      {
-        "score": 0.565706,
-        "tone_id": "fear",
-        "tone_name": "Fear"
-      },
-      {
-        "score": 0.647322,
-        "tone_id": "anger",
-        "tone_name": "Anger"
-      },
-      {
-        "score": 0.724923,
-        "tone_id": "confident",
-        "tone_name": "Confident"
-      }
-    ]
-  }
-})
+#        print(self.sentiment.analyze_text(text))
+        self.assertEqual(self.sentiment.analyze_text(text), output )
 
 
         
