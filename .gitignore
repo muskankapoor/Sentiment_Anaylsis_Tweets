@@ -136,13 +136,10 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
-<<<<<<< HEAD
 
 # IBM Watson Credentials
 ibm-credentials.env
-||||||| merged common ancestors
-=======
 
 # App databases
 db/
->>>>>>> eac09469147b68a526a16bd7f32a77626b83e994
+
