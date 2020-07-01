@@ -143,3 +143,5 @@ ibm-credentials.env
 # App databases
 db/
 
+# Development env vars, which could contain secrets
+.env.docker

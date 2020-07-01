@@ -13,4 +13,3 @@ class RandomTweeter(Tweeter):
 
     def get_tweet_text(self, tweet_id):
         return self._gen.sentence()
-
