@@ -28,4 +28,6 @@ def tweet_analysis(tweet_id):
     except error.TweetNotFoundError:
         return jsonify(error='No tweet found with that ID.'), 404
 
-    return sentimenter.analyze_text(text)
+    analysis_json = sentimenter.analyze_text(text)
+    analysis_json['tweet_text'] = text
+    return analysis_json
