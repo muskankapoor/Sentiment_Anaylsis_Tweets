@@ -10,8 +10,8 @@ class Twitter(Tweeter):
 
     def get_tweet_text(self, tweet_id):
         try:
-            status = self._api.get_status(tweet_id)
-            return status.text
+            status = self._api.get_status(tweet_id, tweet_mode='extended')
+            return status.full_text
         except tweepy.error.TweepError as e:
             if e.api_code == 144:
                 raise error.TweetNotFoundError
